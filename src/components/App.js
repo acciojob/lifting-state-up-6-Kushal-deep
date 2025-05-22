@@ -12,10 +12,9 @@ const App = () => {
 };
 
   const [todos,setTodos]=useState([ 
-  { task: "reading", completed: false },
-  { task: "dancing", completed: false },
-  { task: "sleeping", completed: false },
-  { task: "coding", completed: false }])
+  { task: "Learn React", completed: false },
+  { task: "Built a React app", completed: false },
+  { task: "Deploy the React app", completed: false }])
   return (
     <div>
         {/* Do not remove the main div */}
@@ -25,6 +24,7 @@ const App = () => {
   )
 }
 
+// - {item.completed ? "✅ Completed" : "❌ Not Completed"}
 
 const Child = ({todos,handleComplete}) => {
   return(
@@ -35,7 +35,7 @@ const Child = ({todos,handleComplete}) => {
       todos.map((item,index)=>(
         <div key={index}>
           <li style={{display:"inline"}}>
-            {item.task} - {item.completed ? "✅ Completed" : "❌ Not Completed"}
+            {item.task} 
           </li>
            {!item.completed && (
             <button onClick={() => handleComplete(index)}>Complete</button>
