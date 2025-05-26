@@ -30,22 +30,24 @@ const Child = ({todos,handleComplete}) => {
   return(
     <>
     <h2>Child component</h2>
-
+<ul>
     {
       todos.map((item,index)=>(
-        <div key={index}>
-          <li style={{display:"inline"}}>{item.task} 
-            </li>
+        
+          <li  key={index} >{item.task} 
+           
            {!item.completed && (
             <button onClick={() => handleComplete(index)}>Complete</button>
           )}
+           </li>
           
 
 
-        </div>
+        
 
       ))
     }
+    </ul>
     
     
     </>
