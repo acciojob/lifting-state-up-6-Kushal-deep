@@ -34,10 +34,12 @@ const Child = ({todos,handleComplete}) => {
     {
       todos.map((item,index)=>(
         <div key={index}>
-          <li style={{display:"inline"}}>{item.task} </li>
+          <li style={{display:"inline"}}>{item.task} 
            {!item.completed && (
             <button onClick={() => handleComplete(index)}>Complete</button>
           )}
+          </li>
+
 
         </div>
 
