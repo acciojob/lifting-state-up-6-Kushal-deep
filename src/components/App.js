@@ -24,12 +24,10 @@ const App = () => {
   )
 }
 
-// - {item.completed ? "✅ Completed" : "❌ Not Completed"}
-
 const Child = ({todos,handleComplete}) => {
   return(
     <>
-    <h2>Child component</h2>
+    <h2>Child componenttt</h2>
 <ul>
     {
       todos.map((item,index)=>(
